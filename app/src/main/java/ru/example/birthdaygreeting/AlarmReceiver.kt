@@ -35,7 +35,7 @@ class AlarmReceiver : BroadcastReceiver() {
                 .setFullScreenIntent(npi, true)
                 .setAutoCancel(true)
                 .build()
-                .let { NotificationManagerCompat(context).notify(1, it) }
+                .let { NotificationManagerCompat.from(context).notify(1, it) }
         }
         Scheduler.schedule(context) // ставим будильник на следующий год
     }
